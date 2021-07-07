@@ -17,4 +17,12 @@ object MathUtils {
     println("Elapsed time: " + (t1 - t0) + "ns")
     result
   }
+
+  def squareListPatternMatching(xs: List[Int]): List[Int] =
+    xs match {
+    case List() => xs
+    case y :: ys => y * y :: squareListPatternMatching(ys)
+  }
+
+  def squareListMap(xs: List[Int]): List[Int] = xs.map(x => x * x)
 }
