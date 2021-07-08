@@ -1,9 +1,3 @@
-/**
- * Exercise 2
- * Starting from the previous exercise, use a stackable trait to modify
- * the behavior of 'put' so it reverses each string (e.g. hello to olleh)
- * before adding it to the queue. Include tests.
- */
 trait TraitQueue {
   private var capacity = 10
   private var array: Array[String] = new Array[String](capacity)
