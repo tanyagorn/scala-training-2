@@ -25,4 +25,10 @@ object MathUtils {
   }
 
   def squareListMap(xs: List[Int]): List[Int] = xs.map(x => x * x)
+
+  def median(input: Seq[Double]): Double = {
+    val (lower, upper) = input.sortWith(_<_).splitAt(input.size / 2)
+    if (input.size % 2 == 0) (lower.last + upper.head) / 2.0 else upper.head
+  }
+
 }

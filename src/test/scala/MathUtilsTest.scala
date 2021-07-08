@@ -42,4 +42,14 @@ class MathUtilsTest extends FunSpec {
       assert(MathUtils.squareListMap(List()) == List())
     }
   }
+
+  describe("Find median of input") {
+    it("should return a median of a given sequence contains odd elements") {
+      assert(MathUtils.median(Seq(5, 1.5, 2, 3.7, 4)) == 3.7)
+    }
+
+    it("should return a median of a given sequence contains even elements") {
+      assert(MathUtils.median(Seq(6, 1, 2, 3, 4, 5)) == 3.5)
+    }
+  }
 }
