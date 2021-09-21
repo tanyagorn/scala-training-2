@@ -37,4 +37,7 @@ object StringUtils {
     array.flatMap(word => word.map(char => char -> word)).groupMap(_._1)(_._2)
   }
 
+  def convertListOfStringToListOfCharacter(wordList: List[String]) : List[Char] = {
+    wordList.flatMap(_.toList)
+  }
 }

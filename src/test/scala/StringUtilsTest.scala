@@ -32,4 +32,11 @@ class StringUtilsTest extends FunSpec {
       assert(diff.isEmpty)
     }
   }
+
+  describe("Convert list of string to list of character") {
+    it("should return list of character of all the characters in all the strings") {
+      val expect = List('o', 'n', 'e', 't', 'w', 'o', '3')
+      assert(StringUtils.convertListOfStringToListOfCharacter(List("one", "two", "3")).equals(expect))
+    }
+  }
 }
