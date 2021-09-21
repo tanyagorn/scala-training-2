@@ -9,4 +9,12 @@ object MathUtils {
     @tailrec def gcd(x: Int, y: Int): Int = if (y == 0) x else gcd(y, x % y)
     gcd(a, b)
   }
+
+  def time[R](block: => R): R = {
+    val t0 = System.nanoTime()
+    val result = block
+    val t1 = System.nanoTime()
+    println("Elapsed time: " + (t1 - t0) + "ns")
+    result
+  }
 }
