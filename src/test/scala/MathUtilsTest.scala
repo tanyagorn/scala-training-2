@@ -22,4 +22,24 @@ class MathUtilsTest extends FunSpec {
       assert(MathUtils.GCD(5, 11) == 1)
     }
   }
+
+  describe("Squares all elements of a list with Pattern Matching") {
+    it("should return a list with the results") {
+      assert(MathUtils.squareListPatternMatching(List(3, 5, 10)) == List(9, 25, 100))
+    }
+
+    it("should return an empty list given empty list") {
+      assert(MathUtils.squareListPatternMatching(List()) == List())
+    }
+  }
+
+  describe("Squares all elements of a list with Mapping") {
+    it("should return a list with the results") {
+      assert(MathUtils.squareListMap(List(3, 5, 10)) == List(9, 25, 100))
+    }
+
+    it("should return an empty list given empty list") {
+      assert(MathUtils.squareListMap(List()) == List())
+    }
+  }
 }
